@@ -15,7 +15,7 @@ public class TestUsers
     public static List<TestUser> Users
     {
         get
-        {    
+        {
             return new List<TestUser>
             {
                 new TestUser
@@ -36,6 +36,7 @@ public class TestUsers
                     Password = "password",
                     Claims =
                     {
+                        new Claim("role", "PayingUser"),
                         new Claim(JwtClaimTypes.GivenName, "Emma"),
                         new Claim(JwtClaimTypes.FamilyName, "Flagg"),
                     }
